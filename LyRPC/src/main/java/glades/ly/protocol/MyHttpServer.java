@@ -36,7 +36,7 @@ public class MyHttpServer {
         service.setContainer(engine);
         service.addConnector(connector);
 
-        tomcat.addServlet(contextPath, "dispatcher", new MyDispatherServlet());
+        tomcat.addServlet(contextPath, "dispatcher", new MyDispatcherServlet());
         context.addServletMappingDecoded("/*", "dispatcher");
 
         try {
